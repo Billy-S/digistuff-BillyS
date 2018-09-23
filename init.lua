@@ -11,6 +11,7 @@ digistuff.ts_on_receive_fields = function (pos, formname, fields, sender)
 		return
 	end
 	local init = meta:get_int("init") == 1
+	fields.clicker               = playername
 	fields.interactingPlayerName = playername
 	if not init then
 		if fields.save then
